@@ -1,0 +1,64 @@
+Módulos Personalizados
+
+Quando se deseja instalar um novo pacote programa-se: install e o nome do pacote
+Ex.: pip install pandas
+
+Pode-se localizar mais tipos de pacotes através do site www.pypi.org
+
+Então pode-se importar o pacote:
+
+import colorama
+
+Mas pode-se optar por importar apenas uma funcionalidade como o Fore
+
+print(help(colorama.Fore))
+
+Utiliza-se outro modo de programação conforme segue;
+
+from colorama import Fore
+
+Assim, o carragamento é somente do Fore e o restante do pacote não é carregado.
+
+Como os arquivos das bibliotecas estão no formato *.py, pode criar a própria biblioteca. 
+
+Ex.:
+  
+Criar um arquivo dentro da pasta do ambiente virtual do projeto com o nome: minhas funções
+
+Escrever a função desejada
+
+def somar (*args):
+    return sum(args)
+
+def multipicar (*args):
+    resultado = 1
+    for numero in args:
+        resultado *= numero
+    return resultado
+
+Então, mudar para o arquivo do script e importar a nova função que foi criada com o nome de minha_funcao
+
+import minhas_funcoes
+
+Pode-se simplificar o nome da função para mf e simplificar a digitação posterior
+
+import minhas_funcoes as mf
+
+print(mf.somar(10, 20))
+print(mf.multiplicar (10, 20))
+
+PS C:\Users\goaf\OneDrive - Novozymes A S\Desktop\Python\Exercicios\vscode\material_modulo12\Novo_Ambiente_Virtual> & C:/Users/goaf/AppData/Local/Programs/Python/Python311/python.exe "c:/Users/goaf/OneDrive - Novozymes A S/Desktop/Python/Exercicios/vscode/material_modulo12/Novo_Ambiente_Virtual/script.py"
+Utilizando o ambiente virtual
+30 
+200
+
+É possivel importar somente uma função da pasta minhas funções: Ex.:
+
+from minhas_funcoes import somar
+
+Para programar um arquivo no interpretador Jupyter pode-se criar uma extenção *ipynb
+
+Então, verificar no canto superior direito que o VSCode vai identificar 2 interpretadores. Escolha o kernel vinculado ao ambiente virtual.
+
+Assim, vai ser necessário instalar a versão mais recente do ipykernel package para permitir a execução da nova pasta *+ipynd. o ambiente Jupyter Notebook.
+  
